@@ -33,7 +33,7 @@ class TemperatureSensor(AnalogSensor):
         Read and return the fahrenheit value of the
         temperature sensor.
         """
-        return (self.read_celsius * 9.0 / 5.0) + 32
+        return (self.read_celsius() * 9.0 / 5.0) + 32
 
     def read_kelvin(self):
         """

@@ -20,18 +20,18 @@ class Led(Driver):
         """
         State should be a 1 or a 0.
         """
-        self.is_on = state
+        self.current_state = (state == 1)
         self.connection.digital_write(self.pin, state)
 
     def is_on(self):
         return self.current_state
 
     def turn_on(self):
-        self.is_on = True
+        self.current_state = True
         self.connection.digital_write(self.pin, 1)
 
     def turn_off(self):
-        self.is_on = False
+        self.current_state = False
         self.connection.digital_write(self.pin, 0)
 
     def toggle(self):
