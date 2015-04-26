@@ -1,4 +1,5 @@
 from zorg_gpio.led import Led
+from zorg_gpio.servo import Servo
 from .mock_device import MockDriver
 from unittest import TestCase
 
@@ -32,3 +33,17 @@ class TestLED(TestCase):
         second_toggle = self.led.is_on()
 
         self.assertTrue(first_toggle != second_toggle)
+
+
+class TestServo(TestCase):
+
+        def setUp(self):
+            self.servo = Servo({}, MockDriver())
+
+        def test_set_angle(self):
+            self.servo.set_angle(100)
+            self.assertEqual(self.servo.angle, 100)
+
+        def test_get_angle(self):
+            self.servo.set_angle(150)
+            self.assertEqual(self.servo.get_angle(), 150)
