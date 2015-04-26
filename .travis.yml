@@ -13,7 +13,7 @@ install:
 
 # command to run tests
 script:
-  - nosetests  --with-coverage --cover-package=chatterbot
+  - nosetests  --with-coverage --cover-package=zorg_gpio
 
 after_success:
   - coveralls
