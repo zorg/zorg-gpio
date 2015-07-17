@@ -20,13 +20,9 @@ class AnalogSensorSmokeTests(SmokeTestCase):
         method on the driver class.
         """
         sensor = AnalogSensor(self.options, self.connection)
-        all_commands_have_methods = True
 
         for command in sensor.commands:
-            if command not in dir(sensor):
-                all_commands_have_methods = False
-
-        self.assertTrue(all_commands_have_methods)
+            self.assertIn(command, dir(sensor))
 
 
 class LEDSmokeTests(SmokeTestCase):
@@ -37,13 +33,9 @@ class LEDSmokeTests(SmokeTestCase):
         method on the driver class.
         """
         led = Led(self.options, self.connection)
-        all_commands_have_methods = True
 
         for command in led.commands:
-            if command not in dir(led):
-                all_commands_have_methods = False
-
-        self.assertTrue(all_commands_have_methods)
+            self.assertIn(command, dir(led))
 
 
 class ServoSmokeTests(SmokeTestCase):
@@ -54,13 +46,9 @@ class ServoSmokeTests(SmokeTestCase):
         method on the driver class.
         """
         servo = Servo(self.options, self.connection)
-        all_commands_have_methods = True
 
         for command in servo.commands:
-            if command not in dir(servo):
-                all_commands_have_methods = False
-
-        self.assertTrue(all_commands_have_methods)
+            self.assertIn(command, dir(servo))
 
 
 class TemperatureSmokeTests(SmokeTestCase):
@@ -71,11 +59,7 @@ class TemperatureSmokeTests(SmokeTestCase):
         method on the driver class.
         """
         sensor = TemperatureSensor(self.options, self.connection)
-        all_commands_have_methods = True
 
         for command in sensor.commands:
-            if command not in dir(sensor):
-                all_commands_have_methods = False
-
-        self.assertTrue(all_commands_have_methods)
+            self.assertIn(command, dir(sensor))
 
