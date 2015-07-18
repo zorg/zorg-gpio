@@ -1,0 +1,9 @@
+site_name: zorg-gpio
+repo_url: https://github.com/zorg-framework/zorg-gpio
+pages:
+- Home: index.md
+- Drivers:
+  - LED: led.md
+  - Servo: servo.md
+  - Temperature sensor: temperature_sensor.md
+theme: readthedocs
