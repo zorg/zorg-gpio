@@ -2,6 +2,7 @@ from unittest import TestCase
 from zorg_gpio import AnalogSensor
 from zorg_gpio import TemperatureSensor
 from zorg_gpio import Servo
+from zorg_gpio import Relay
 from zorg_gpio import Led
 
 
@@ -49,6 +50,19 @@ class ServoSmokeTests(SmokeTestCase):
 
         for command in servo.commands:
             self.assertIn(command, dir(servo))
+
+
+class RelaySmokeTests(SmokeTestCase):
+
+    def test_command_method_exists(self):
+        """
+        Check that each command listed has a corresponding
+        method on the driver class.
+        """
+        relay = Relay(self.options, self.connection)
+
+        for command in relay.commands:
+            self.assertIn(command, dir(relay))
 
 
 class TemperatureSmokeTests(SmokeTestCase):

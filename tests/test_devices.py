@@ -1,5 +1,6 @@
 from zorg_gpio.led import Led
 from zorg_gpio.servo import Servo
+from zorg_gpio.relay import Relay
 from .mock_device import MockDriver
 from unittest import TestCase
 
@@ -47,3 +48,35 @@ class TestServo(TestCase):
         def test_get_angle(self):
             self.servo.set_angle(150)
             self.assertEqual(self.servo.get_angle(), 150)
+
+
+class TestRelay(TestCase):
+
+    def setUp(self):
+        self.relay = Relay({}, MockDriver())
+
+    def test_set_state_on(self):
+        self.relay.set_state(1)
+        self.assertEqual(self.relay.is_on(), True)
+
+    def test_set_state_off(self):
+        self.relay.set_state(0)
+        self.assertEqual(self.relay.is_on(), False)
+
+    def test_turn_on(self):
+        self.relay.turn_on()
+        self.assertEqual(self.relay.is_on(), True)
+
+    def test_turn_off(self):
+        self.relay.turn_off()
+        self.assertEqual(self.relay.is_on(), False)
+
+    def test_toggle(self):
+        self.relay.toggle()
+        first_toggle = self.relay.is_on()
+
+        self.relay.toggle()
+        second_toggle = self.relay.is_on()
+
+        self.assertTrue(first_toggle != second_toggle)
+

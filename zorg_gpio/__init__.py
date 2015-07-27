@@ -1,3 +1,4 @@
+from .relay import Relay
 from .servo import Servo
 from .led import Led
 from .light_sensor import LightSensor
