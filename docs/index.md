@@ -12,6 +12,7 @@ pip install zorg zorg-gpio
 
 ## Drivers
 
+* [Button](button.md)
 * [LED](led.md)
 * [Servo](servo.md)
 * [Relay](relay.md)
