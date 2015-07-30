@@ -6,22 +6,19 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
-try:
-    from pypandoc import convert
-    readme = lambda f: convert(f, "rst")
-except ImportError:
-    print("Module pypandoc not found, could not convert Markdown to RST")
-    readme = lambda f: open(f, "r").read()
-
 req = open("requirements.txt")
 requirements = req.readlines()
 
+# Dynamically retrieve the version
+version_string = __import__('zorg_gpio').__version__
+
 setup(
     name="zorg-gpio",
-    version="0.0.1",
+    version=version_string,
     url="https://github.com/zorg-framework/zorg-gpio",
-    description="Python framework for robotics and physical computing.",
-    long_description=readme("README.md"),
+    description="GPIO drivers for Zorg robots.",
+    setup_requires=['setuptools-markdown'],
+    long_description_markdown_filename='README.md',
     author="Zorg Group",
     author_email="gunthercx@gmail.com",
     packages=find_packages(),
@@ -29,7 +26,7 @@ setup(
     include_package_data=True,
     install_requires=requirements,
     license="MIT",
-    zip_safe=False,
+    zip_safe=True,
     platforms=["any"],
     keywords=["zorg", "gpio"],
     classifiers=[
