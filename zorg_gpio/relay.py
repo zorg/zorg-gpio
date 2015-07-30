@@ -39,4 +39,3 @@ class Relay(Driver):
             self.turn_off()
         else:
             self.turn_on()
-

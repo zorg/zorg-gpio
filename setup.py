@@ -9,7 +9,7 @@ except ImportError:
 req = open("requirements.txt")
 requirements = req.readlines()
 
-# Dynamically retrieve the version
+# Dynamically retrieve the version from the module
 version_string = __import__('zorg_gpio').__version__
 
 setup(

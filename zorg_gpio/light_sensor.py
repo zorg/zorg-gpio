@@ -40,4 +40,3 @@ class LightSensor(AnalogSensor):
         self.previous_value = current_value
 
         return False
-
