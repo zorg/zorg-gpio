@@ -23,3 +23,16 @@ Turns the LED off.
 Toggles the state of the LED. (If the LED is on, then it will be turned off, if
 it is off, then it will be turned on.)
 
+## Examples
+
+Several examples are available to show how to use this driver.
+
+### LED with Firmata Example
+Code for this example can be found in the [`zorg-firmata` repo on GitHub](https://github.com/zorg-framework/zorg-firmata/blob/master/examples/led.py).
+
+**Typical setup:**
+
+Connect the led between pin 13.
+
+![image](schematics/arduino_led.svg)
+

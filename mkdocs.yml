@@ -6,5 +6,7 @@ pages:
   - LED: led.md
   - Servo: servo.md
   - Relay: relay.md
+  - Analog sensor: analog_sensor.md
+  - Light sensor: light_sensor.md
   - Temperature sensor: temperature_sensor.md
 theme: readthedocs
