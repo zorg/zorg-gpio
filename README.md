@@ -12,6 +12,8 @@ This module provides drivers for [General Purpose Input/Output (GPIO)](https://e
 ## Getting Started
 Install the module with: `pip install zorg zorg-gpio`
 
+## [Documentation](http://zorg-gpio.readthedocs.org/)
+
 ## Example
 ```python
 import time
@@ -47,16 +49,16 @@ robot.start()
 Zorg has a extensible system for connecting to hardware devices.
 The following GPIO devices are currently supported:
 
-- Analog Sensor
-- Temperature sensor
+- [Analog Sensor](docs/analog_sensor.md)
+- [Temperature sensor](docs/temperature_sensor.md)
 - Microphone
-- Light sensor
+- [Light sensor](docs/light_sensor.md)
 - Touch sensor
 - Rotary Angle Sensor
-- Button
-- LED
-- Relay
-- Servo
+- [Button](docs/button.md)
+- [LED](docs/led.md)
+- [Relay](docs/relay.md)
+- [Servo](docs/servo.md)
 - Buzzer
 
 [Open a new issue](https://github.com/zorg-framework/zorg-gpio/issues/new) to request support for additional components.
