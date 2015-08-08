@@ -14,6 +14,8 @@ pip install zorg zorg-gpio
 
 * [LED](led.md)
 * [Servo](servo.md)
+* [Analog sensor](light_sensor.md)
+* [Light sensor](light_sensor.md)
 * [Temperature sensor](temperature_sensor.md)
 
 ## Connections
