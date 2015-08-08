@@ -5,5 +5,6 @@ pages:
 - Drivers:
   - LED: led.md
   - Servo: servo.md
+  - Relay: relay.md
   - Temperature sensor: temperature_sensor.md
 theme: readthedocs
