@@ -9,7 +9,7 @@ def MockDriver():
     mock_driver.analog_read = Mock(return_value=500)
 
     mock_driver.digital_write = Mock()
-    mock_driver.digital_read = Mock(return_value=500)
+    mock_driver.digital_read = Mock(return_value=1.0)
 
     mock_driver.servo_write = Mock()
     mock_driver.servo_read = Mock(return_value=150)

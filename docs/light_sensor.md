@@ -21,4 +21,4 @@ Code for this example can be found in the [`zorg-firmata` repo on GitHub](https:
 - Connect the light sensor between analog pin 5 (or any analog pin or your choosing).
 - Connect a 10 K Ohm pull-down resistor between ground (GND) and the analog pin you selected.
 
-![image](schematics/arduino_nano_light_sensor.svg)
+![image](schematics/arduino_light_sensor.svg)
