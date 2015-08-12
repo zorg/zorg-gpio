@@ -12,12 +12,13 @@ pip install zorg zorg-gpio
 
 ## Drivers
 
-* [Button](button.md)
-* [LED](led.md)
-* [Servo](servo.md)
-* [Relay](relay.md)
 * [Analog sensor](analog_sensor.md)
+* [Button](button.md)
+* [Digital sensor](digital_sensor.md)
+* [LED](led.md)
 * [Light sensor](light_sensor.md)
+* [Relay](relay.md)
+* [Servo](servo.md)
 * [Temperature sensor](temperature_sensor.md)
 
 ## Connections
