@@ -5,4 +5,4 @@ to read the value from analog sensors.
 
 ## `read`
 
-Returns the raw value from the temperature sensor.
+Returns the raw value from the analog sensor.

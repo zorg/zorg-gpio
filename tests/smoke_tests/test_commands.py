@@ -1,5 +1,6 @@
 from unittest import TestCase
 from zorg_gpio import AnalogSensor
+from zorg_gpio import DigitalSensor
 from zorg_gpio import TemperatureSensor
 from zorg_gpio import Servo
 from zorg_gpio import Relay
@@ -21,6 +22,19 @@ class AnalogSensorSmokeTests(SmokeTestCase):
         method on the driver class.
         """
         sensor = AnalogSensor(self.options, self.connection)
+
+        for command in sensor.commands:
+            self.assertIn(command, dir(sensor))
+
+
+class DigitalSensorSmokeTests(SmokeTestCase):
+
+    def test_command_method_exists(self):
+        """
+        Check that each command listed has a corresponding
+        method on the driver class.
+        """
+        sensor = DigitalSensor(self.options, self.connection)
 
         for command in sensor.commands:
             self.assertIn(command, dir(sensor))

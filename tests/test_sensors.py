@@ -1,5 +1,6 @@
 from zorg_gpio.temperature_sensor import TemperatureSensor
 from zorg_gpio.analog_sensor import AnalogSensor
+from zorg_gpio.digital_sensor import DigitalSensor
 from zorg_gpio.light_sensor import LightSensor
 from zorg_gpio.button import Button
 from .mock_device import MockDriver
@@ -13,6 +14,15 @@ class TestAnalogSensor(TestCase):
 
     def test_read(self):
         self.assertEqual(self.sensor.read(), 500)
+
+
+class TestDigitalSensor(TestCase):
+
+    def setUp(self):
+        self.sensor = DigitalSensor({}, MockDriver())
+
+    def test_read(self):
+        self.assertEqual(self.sensor.read(), 1)
 
 
 class TestLightSensor(TestCase):

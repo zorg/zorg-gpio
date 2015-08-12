@@ -8,6 +8,7 @@ pages:
   - Relay: relay.md
   - Button: button.md
   - Analog sensor: analog_sensor.md
+  - Digital sensor: digital_sensor.md
   - Light sensor: light_sensor.md
   - Temperature sensor: temperature_sensor.md
 theme: readthedocs
