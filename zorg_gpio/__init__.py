@@ -1,8 +1,22 @@
+from .analog_sensor import AnalogSensor
+from .button import Button
+from .digital_sensor import DigitalSensor
+from .led import Led
+from .light_sensor import LightSensor
 from .relay import Relay
 from .servo import Servo
-from .led import Led
-from .button import Button
-from .light_sensor import LightSensor
 from .temperature_sensor import TemperatureSensor
-from .analog_sensor import AnalogSensor
-from .digital_sensor import DigitalSensor
+
+
+__all__ = [
+    'AnalogSensor',
+    'Button',
+    'DigitalSensor',
+    'Led',
+    'LightSensor',
+    'Relay',
+    'Servo',
+    'TemperatureSensor',
+]
+
+__version__ = '0.0.1'

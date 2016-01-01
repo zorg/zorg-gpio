@@ -6,8 +6,8 @@ class Button(Driver):
     def __init__(self, options, connection):
         super(Button, self).__init__(options, connection)
 
-        self.pressed = False;
-        self.previous_state = -1;
+        self.pressed = False
+        self.previous_state = -1
 
         self.commands = ["is_pressed", "is_bumped"]
 
@@ -31,13 +31,12 @@ class Button(Driver):
         reading = self.connection.digital_read(self.pin)
         self.pressed = (reading > 0)
 
-        if self.pressed == True and self.previous_state < 1:
+        if self.pressed is True and self.previous_state < 1:
             self.previous_state = reading
             return True
 
-        if self.pressed == False and self.previous_state > 0:
+        if self.pressed is False and self.previous_state > 0:
             self.previous_state = reading
             return True
 
         return False
-
