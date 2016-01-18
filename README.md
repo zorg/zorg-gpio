@@ -1,10 +1,12 @@
 # zorg-gpio
 
-[![Build Status](https://travis-ci.org/zorg-framework/zorg-gpio.svg)](https://travis-ci.org/zorg-framework/zorg-gpio)
-[![Code Climate](https://codeclimate.com/github/zorg-framework/zorg-gpio/badges/gpa.svg)](https://codeclimate.com/github/zorg-framework/zorg-gpio)
-[![Coverage Status](https://coveralls.io/repos/zorg-framework/zorg-gpio/badge.svg?branch=master&service=github)](https://coveralls.io/r/zorg-framework/zorg-gpio)
+[![Package Version](https://img.shields.io/pypi/v/zorg-gpio.svg)](https://pypi.python.org/pypi/zorg-gpio/)
+[![Requirements Status](https://requires.io/github/zorg/zorg-gpio/requirements.svg?branch=master)](https://requires.io/github/zorg/zorg-gpio/requirements/?branch=master)
+[![Build Status](https://travis-ci.org/zorg/zorg-gpio.svg?branch=master)](https://travis-ci.org/zorg/zorg-gpio)
+[![Code Climate](https://codeclimate.com/github/zorg/zorg-gpio/badges/gpa.svg)](https://codeclimate.com/github/zorg/zorg-gpio)
+[![Coverage Status](https://coveralls.io/repos/github/zorg/zorg-gpio/badge.svg?branch=master)](https://coveralls.io/github/zorg/zorg-gpio?branch=master)
 
-Zorg (https://zorg-framework.github.io/) is a Python
+Zorg (https://zorg.github.io/) is a Python
 framework for robotics and physical computing.
 
 This module provides drivers for [General Purpose Input/Output (GPIO)](https://en.wikipedia.org/wiki/General_Purpose_Input/Output) devices. Typically, this library is registered by an adaptor class such as [`zorg-edison`](https://github.com/zorg/zorg-edison) that supports the needed interfaces for GPIO devices.
@@ -62,7 +64,7 @@ The following GPIO devices are currently supported:
 - [Servo](docs/servo.md)
 - Buzzer
 
-[Open a new issue](https://github.com/zorg-framework/zorg-gpio/issues/new) to request support for additional components.
+[Open a new issue](https://github.com/zorg/zorg-gpio/issues/new) to request support for additional components.
 
 ## License
-[Copyright (c) 2015 Team Zorg](https://github.com/zorg-framework/zorg/blob/master/LICENSE.md)
+[Copyright (c) 2015 Team Zorg](https://github.com/zorg/zorg/blob/master/LICENSE.md)

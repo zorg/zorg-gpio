@@ -15,7 +15,7 @@ version_string = __import__('zorg_gpio').__version__
 setup(
     name="zorg-gpio",
     version=version_string,
-    url="https://github.com/zorg-framework/zorg-gpio",
+    url="https://github.com/zorg/zorg-gpio",
     description="GPIO drivers for Zorg robots.",
     setup_requires=['setuptools-markdown'],
     long_description_markdown_filename='README.md',

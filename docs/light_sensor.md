@@ -14,7 +14,7 @@ Otherwise, returns false.
 Several examples are available to show how to use this driver.
 
 ### Light Sensor with Firmata Example
-Code for this example can be found in the [`zorg-firmata` repo on GitHub](https://github.com/zorg-framework/zorg-firmata/blob/master/examples/light_sensor.py).
+Code for this example can be found in the [`zorg-firmata` repo on GitHub](https://github.com/zorg/zorg-firmata/blob/master/examples/light_sensor.py).
 
 **Typical setup:**
 

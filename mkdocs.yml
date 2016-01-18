@@ -1,5 +1,5 @@
 site_name: zorg-gpio
-repo_url: https://github.com/zorg-framework/zorg-gpio
+repo_url: https://github.com/zorg/zorg-gpio
 pages:
 - Home: index.md
 - Drivers:

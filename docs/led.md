@@ -28,7 +28,7 @@ it is off, then it will be turned on.)
 Several examples are available to show how to use this driver.
 
 ### LED with Firmata Example
-Code for this example can be found in the [`zorg-firmata` repo on GitHub](https://github.com/zorg-framework/zorg-firmata/blob/master/examples/led.py).
+Code for this example can be found in the [`zorg-firmata` repo on GitHub](https://github.com/zorg/zorg-firmata/blob/master/examples/led.py).
 
 **Typical setup:**
 

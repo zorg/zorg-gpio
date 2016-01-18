@@ -1,6 +1,6 @@
 # Zorg GPIO
 
-This module provides drivers for [General Purpose Input/Output (GPIO)](https://en.wikipedia.org/wiki/General_Purpose_Input/Output) devices. Typically, this library is registered by an adaptor class such as [`zorg-edison`](https://github.com/zorg-framework/zorg-edison) or [`zorg-raspi`](https://github.com/zorg-framework/zorg-raspi) that supports the needed interfaces for GPIO devices.
+This module provides drivers for [General Purpose Input/Output (GPIO)](https://en.wikipedia.org/wiki/General_Purpose_Input/Output) devices. Typically, this library is registered by an adaptor class such as [`zorg-edison`](https://github.com/zorg/zorg-edison) or [`zorg-raspi`](https://github.com/zorg/zorg-raspi) that supports the needed interfaces for GPIO devices.
 
 ## Installation
 

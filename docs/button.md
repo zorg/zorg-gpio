@@ -16,7 +16,7 @@ from closed to open.
 Several examples are available to show how to use this driver.
 
 ### Button with Firmata Example
-Code for this example can be found in the [`zorg-firmata` repo on GitHub](https://github.com/zorg-framework/zorg-firmata/blob/master/examples/button.py).
+Code for this example can be found in the [`zorg-firmata` repo on GitHub](https://github.com/zorg/zorg-firmata/blob/master/examples/button.py).
 
 **Typical setup:**
 
