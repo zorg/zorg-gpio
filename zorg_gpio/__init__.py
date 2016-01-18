@@ -3,6 +3,7 @@ from .button import Button
 from .digital_sensor import DigitalSensor
 from .led import Led
 from .light_sensor import LightSensor
+from .piezo import Piezo
 from .relay import Relay
 from .servo import Servo
 from .temperature_sensor import TemperatureSensor
