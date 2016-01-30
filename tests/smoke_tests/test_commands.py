@@ -4,6 +4,7 @@ from zorg_gpio import DigitalSensor
 from zorg_gpio import LightSensor
 from zorg_gpio import TemperatureSensor
 from zorg_gpio import Button
+from zorg_gpio import Buzzer
 from zorg_gpio import Servo
 from zorg_gpio import Relay
 from zorg_gpio import Led
@@ -36,6 +37,15 @@ class ButtonSmokeTests(SmokeTestCase):
 
         for command in button.commands:
             self.assertIn(command, dir(button))
+
+
+class BuzzerSmokeTests(SmokeTestCase):
+
+    def test_command_method_exists(self):
+        buzzer = Buzzer(self.options, self.connection)
+
+        for command in buzzer.commands:
+            self.assertIn(command, dir(buzzer))
 
 
 class DigitalSensorSmokeTests(SmokeTestCase):

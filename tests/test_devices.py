@@ -1,6 +1,7 @@
 from zorg_gpio.led import Led
 from zorg_gpio.servo import Servo
 from zorg_gpio.relay import Relay
+from zorg_gpio.buzzer import Buzzer
 from .mock_device import MockAdaptor
 from unittest import TestCase
 
@@ -80,3 +81,33 @@ class TestRelay(TestCase):
 
         self.assertTrue(first_toggle != second_toggle)
 
+
+class TestBuzzer(TestCase):
+
+    def setUp(self):
+        self.buzzer = Buzzer({}, MockAdaptor())
+
+    def test_set_state_on(self):
+        self.buzzer.set_state(1)
+        self.assertEqual(self.buzzer.is_on(), True)
+
+    def test_set_state_off(self):
+        self.buzzer.set_state(0)
+        self.assertEqual(self.buzzer.is_on(), False)
+
+    def test_turn_on(self):
+        self.buzzer.turn_on()
+        self.assertEqual(self.buzzer.is_on(), True)
+
+    def test_turn_off(self):
+        self.buzzer.turn_off()
+        self.assertEqual(self.buzzer.is_on(), False)
+
+    def test_toggle(self):
+        self.buzzer.toggle()
+        first_toggle = self.buzzer.is_on()
+
+        self.buzzer.toggle()
+        second_toggle = self.buzzer.is_on()
+
+        self.assertTrue(first_toggle != second_toggle)
