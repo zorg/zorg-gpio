@@ -3,14 +3,14 @@ from zorg_gpio.analog_sensor import AnalogSensor
 from zorg_gpio.digital_sensor import DigitalSensor
 from zorg_gpio.light_sensor import LightSensor
 from zorg_gpio.button import Button
-from .mock_device import MockDriver
+from .mock_device import MockAdaptor
 from unittest import TestCase
 
 
 class TestAnalogSensor(TestCase):
 
     def setUp(self):
-        self.sensor = AnalogSensor({}, MockDriver())
+        self.sensor = AnalogSensor({}, MockAdaptor())
 
     def test_read(self):
         self.assertEqual(self.sensor.read(), 500)
@@ -19,7 +19,7 @@ class TestAnalogSensor(TestCase):
 class TestDigitalSensor(TestCase):
 
     def setUp(self):
-        self.sensor = DigitalSensor({}, MockDriver())
+        self.sensor = DigitalSensor({}, MockAdaptor())
 
     def test_read(self):
         self.assertEqual(self.sensor.read(), 1)
@@ -28,7 +28,7 @@ class TestDigitalSensor(TestCase):
 class TestLightSensor(TestCase):
 
     def setUp(self):
-        self.sensor = LightSensor({}, MockDriver())
+        self.sensor = LightSensor({}, MockAdaptor())
 
     def test_has_changed_first_read(self):
         """
@@ -54,7 +54,7 @@ class TestLightSensor(TestCase):
 class TestButton(TestCase):
 
     def setUp(self):
-        self.button = Button({}, MockDriver())
+        self.button = Button({}, MockAdaptor())
 
     def test_button_pressed(self):
         self.assertTrue(self.button.is_pressed())
@@ -85,7 +85,7 @@ class TestButton(TestCase):
 class TestTemperatureSensor(TestCase):
 
     def setUp(self):
-        self.sensor = TemperatureSensor({}, MockDriver())
+        self.sensor = TemperatureSensor({}, MockAdaptor())
 
     def test_read_celsius(self):
         self.assertEqual(self.sensor.read_celsius(), 25)

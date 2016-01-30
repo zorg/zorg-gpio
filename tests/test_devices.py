@@ -1,14 +1,14 @@
 from zorg_gpio.led import Led
 from zorg_gpio.servo import Servo
 from zorg_gpio.relay import Relay
-from .mock_device import MockDriver
+from .mock_device import MockAdaptor
 from unittest import TestCase
 
 
 class TestLED(TestCase):
 
     def setUp(self):
-        self.led = Led({}, MockDriver())
+        self.led = Led({}, MockAdaptor())
 
     def test_set_state_on(self):
         self.led.set_state(1)
@@ -39,7 +39,7 @@ class TestLED(TestCase):
 class TestServo(TestCase):
 
         def setUp(self):
-            self.servo = Servo({}, MockDriver())
+            self.servo = Servo({}, MockAdaptor())
 
         def test_set_angle(self):
             self.servo.set_angle(100)
@@ -53,7 +53,7 @@ class TestServo(TestCase):
 class TestRelay(TestCase):
 
     def setUp(self):
-        self.relay = Relay({}, MockDriver())
+        self.relay = Relay({}, MockAdaptor())
 
     def test_set_state_on(self):
         self.relay.set_state(1)
