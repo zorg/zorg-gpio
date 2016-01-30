@@ -12,7 +12,8 @@ class RotaryAngleSensor(AnalogSensor):
         # The value of the input voltage
         self.reference_voltage = 5
 
-        # The angular range of the Grove rotary angle sensor is 300 degrees with a linear change in value
+        # The angular range of the Grove rotary angle sensor is 300 degrees
+        # with a linear change in value
         self.angular_range = 300
 
         self.commands += [
@@ -21,9 +22,8 @@ class RotaryAngleSensor(AnalogSensor):
 
     def read_angle(self):
         """
-        Read and return the current angle of the sensor in
-        degrees.
-        The rotary angle sensor produces analog output between 0 and Vcc (5V DC with Seeeduino) on its D1 connector.
+        Read and return the current angle of the sensor in degrees.
+        The rotary angle sensor produces analog output between 0 and Vcc (D1).
         """
         analog_value = self.read()
 

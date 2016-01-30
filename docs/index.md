@@ -7,19 +7,23 @@ This module provides drivers for [General Purpose Input/Output (GPIO)](https://e
 The preferred method of installation is with [pip](http://www.pip-installer.org/en/latest/):
 
 ```
-pip install zorg zorg-gpio
+pip install zorg-gpio
 ```
 
 ## Drivers
 
 * [Analog sensor](analog_sensor.md)
 * [Button](button.md)
+* [Buzzer](buzzer.md)
 * [Digital sensor](digital_sensor.md)
 * [LED](led.md)
 * [Light sensor](light_sensor.md)
+* [Microphone](microphone.md)
 * [Relay](relay.md)
+* [Rotary Angle Sensor](rotary_angle_sensor.md)
 * [Servo](servo.md)
 * [Temperature sensor](temperature_sensor.md)
+* [Touch sensor](touch_sensor.md)
 
 ## Connections
 

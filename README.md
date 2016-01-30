@@ -53,16 +53,16 @@ The following GPIO devices are currently supported:
 
 - [Temperature sensor](docs/temperature_sensor.md)
 - [Light sensor](docs/light_sensor.md)
-- Microphone
-- Touch sensor
-- Rotary Angle Sensor
+- [Microphone](docs/microphone.md)
+- [Touch sensor](docs/touch_sensor.md)
+- [Rotary Angle Sensor](docs/rotary_angle_sensor.md)
 - [Button](docs/button.md)
 - [Analog Sensor](docs/analog_sensor.md)
 - [Digital Sensor](docs/digital_sensor.md)
 - [LED](docs/led.md)
 - [Relay](docs/relay.md)
 - [Servo](docs/servo.md)
-- Buzzer
+- [Buzzer](docs/buzzer.md)
 
 [Open a new issue](https://github.com/zorg/zorg-gpio/issues/new) to request support for additional components.
 
