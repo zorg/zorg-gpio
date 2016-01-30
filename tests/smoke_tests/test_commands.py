@@ -9,6 +9,7 @@ from zorg_gpio import Servo
 from zorg_gpio import Relay
 from zorg_gpio import RotaryAngleSensor
 from zorg_gpio import Led
+from zorg_gpio import TouchSensor
 
 
 class SmokeTestCase(TestCase):
@@ -111,3 +112,11 @@ class TemperatureSmokeTests(SmokeTestCase):
         for command in sensor.commands:
             self.assertIn(command, dir(sensor))
 
+
+class TouchSensorSmokeTests(SmokeTestCase):
+
+    def test_command_method_exists(self):
+        sensor = TouchSensor(self.options, self.connection)
+
+        for command in sensor.commands:
+            self.assertIn(command, dir(sensor))
