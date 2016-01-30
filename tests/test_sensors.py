@@ -2,6 +2,7 @@ from zorg_gpio.temperature_sensor import TemperatureSensor
 from zorg_gpio.analog_sensor import AnalogSensor
 from zorg_gpio.digital_sensor import DigitalSensor
 from zorg_gpio.light_sensor import LightSensor
+from zorg_gpio.rotary_angle_sensor import RotaryAngleSensor
 from zorg_gpio.button import Button
 from .mock_device import MockAdaptor
 from unittest import TestCase
@@ -50,6 +51,17 @@ class TestLightSensor(TestCase):
         self.sensor.previous_value = 498
         self.assertTrue(self.sensor.has_changed())
 
+
+class TestRotaryAngleSensor(TestCase):
+
+    def setUp(self):
+        self.sensor = RotaryAngleSensor({}, MockAdaptor())
+
+    def test_read_angle(self):
+        # Test reading should approximate to 146.627565982404
+        angle = self.sensor.read_angle()
+        self.assertTrue(angle > 145)
+        self.assertTrue(angle < 147)
 
 class TestButton(TestCase):
 

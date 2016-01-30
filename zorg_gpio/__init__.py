@@ -5,6 +5,7 @@ from .digital_sensor import DigitalSensor
 from .led import Led
 from .light_sensor import LightSensor
 from .relay import Relay
+from .rotary_angle_sensor import RotaryAngleSensor
 from .servo import Servo
 from .temperature_sensor import TemperatureSensor
 

@@ -8,7 +8,8 @@ class TemperatureSensor(AnalogSensor):
         super(TemperatureSensor, self).__init__(options, connection)
 
         self.commands += [
-            "read", "read_fahrenheit", "read_celsius", "read_kelvin"
+            "read_resistance", "read_fahrenheit",
+            "read_celsius", "read_kelvin"
         ]
 
     def read_resistance(self):

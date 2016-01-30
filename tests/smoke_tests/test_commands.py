@@ -7,6 +7,7 @@ from zorg_gpio import Button
 from zorg_gpio import Buzzer
 from zorg_gpio import Servo
 from zorg_gpio import Relay
+from zorg_gpio import RotaryAngleSensor
 from zorg_gpio import Led
 
 
@@ -82,6 +83,15 @@ class RelaySmokeTests(SmokeTestCase):
 
         for command in relay.commands:
             self.assertIn(command, dir(relay))
+
+
+class RotaryAngleSensorSmokeTests(SmokeTestCase):
+
+    def test_command_method_exists(self):
+        sensor = RotaryAngleSensor(self.options, self.connection)
+
+        for command in sensor.commands:
+            self.assertIn(command, dir(sensor))
 
 
 class ServoSmokeTests(SmokeTestCase):

@@ -2,9 +2,10 @@ import zorg
 import time
 
 
-def buzz(my):
+def work(my):
     while True:
-        my.buzzer.toggle()
+        angle = my.potentiometer.read_angle()
+        print(angle, "degrees")
         time.sleep(0.5)
 
 robot = zorg.robot({
@@ -15,13 +16,13 @@ robot = zorg.robot({
         },
     },
     "devices": {
-        "buzzer": {
+        "potentiometer": {
             "connection": "edison",
-            "driver": "zorg_gpio.Buzzer",
-            "pin": 4, # Digital pin 4
+            "driver": "zorg_gpio.RotaryAngleSensor",
+            "pin": 0, # Analog pin 0
         },
     },
-    "work": buzz,
+    "work": work,
 })
 
 robot.start()
