@@ -1,10 +1,11 @@
 from zorg_gpio.temperature_sensor import TemperatureSensor
 from zorg_gpio.analog_sensor import AnalogSensor
+from zorg_gpio.button import Button
 from zorg_gpio.digital_sensor import DigitalSensor
 from zorg_gpio.light_sensor import LightSensor
+from zorg_gpio.microphone import Microphone
 from zorg_gpio.rotary_angle_sensor import RotaryAngleSensor
 from zorg_gpio.touch_sensor import TouchSensor
-from zorg_gpio.button import Button
 from .mock_device import MockAdaptor
 from unittest import TestCase
 
@@ -51,6 +52,17 @@ class TestLightSensor(TestCase):
     def test_value_has_decreased(self):
         self.sensor.previous_value = 498
         self.assertTrue(self.sensor.has_changed())
+
+
+class TestMicrophone(TestCase):
+
+    def setUp(self):
+        self.mic = Microphone({}, MockAdaptor())
+
+    def test_read_decibels(self):
+        reading = self.mic.read_decibels()
+        self.assertTrue(reading < -13)
+        self.assertTrue(reading > -15)
 
 
 class TestRotaryAngleSensor(TestCase):

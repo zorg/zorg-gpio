@@ -1,14 +1,15 @@
 from unittest import TestCase
 from zorg_gpio import AnalogSensor
-from zorg_gpio import DigitalSensor
-from zorg_gpio import LightSensor
-from zorg_gpio import TemperatureSensor
 from zorg_gpio import Button
 from zorg_gpio import Buzzer
-from zorg_gpio import Servo
+from zorg_gpio import DigitalSensor
+from zorg_gpio import Led
+from zorg_gpio import LightSensor
+from zorg_gpio import Microphone
 from zorg_gpio import Relay
 from zorg_gpio import RotaryAngleSensor
-from zorg_gpio import Led
+from zorg_gpio import Servo
+from zorg_gpio import TemperatureSensor
 from zorg_gpio import TouchSensor
 
 
@@ -75,6 +76,15 @@ class LightSensorTests(SmokeTestCase):
 
         for command in sensor.commands:
             self.assertIn(command, dir(sensor))
+
+
+class MicrophoneTests(SmokeTestCase):
+
+    def test_command_method_exists(self):
+        mic = Microphone(self.options, self.connection)
+
+        for command in mic.commands:
+            self.assertIn(command, dir(mic))
 
 
 class RelaySmokeTests(SmokeTestCase):
