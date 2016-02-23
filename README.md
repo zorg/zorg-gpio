@@ -54,7 +54,6 @@ The following GPIO devices are currently supported:
 - [Temperature sensor](docs/temperature_sensor.md)
 - [Light sensor](docs/light_sensor.md)
 - [Microphone](docs/microphone.md)
-- [Touch sensor](docs/touch_sensor.md)
 - [Rotary Angle Sensor](docs/rotary_angle_sensor.md)
 - [Button](docs/button.md)
 - [Analog Sensor](docs/analog_sensor.md)

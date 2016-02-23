@@ -4,7 +4,7 @@ import time
 
 def work(my):
     while True:
-        reading = my.touch_sensor.is_pressed()
+        reading = my.button.is_pressed()
         print("touched:", reading)
         time.sleep(0.5)
 
@@ -16,9 +16,9 @@ robot = zorg.robot({
         },
     },
     "devices": {
-        "touch_sensor": {
+        "button": {
             "connection": "edison",
-            "driver": "zorg_gpio.TouchSensor",
+            "driver": "zorg_gpio.Button",
             "pin": 4, # Digital pin 4
         },
     },

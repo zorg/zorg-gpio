@@ -14,5 +14,4 @@ pages:
   - Light sensor: light_sensor.md
   - Microphone: microphone.md
   - Temperature sensor: temperature_sensor.md
-  - Touch sensor: touch_sensor.md
 theme: readthedocs

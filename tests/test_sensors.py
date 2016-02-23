@@ -5,7 +5,6 @@ from zorg_gpio.digital_sensor import DigitalSensor
 from zorg_gpio.light_sensor import LightSensor
 from zorg_gpio.microphone import Microphone
 from zorg_gpio.rotary_angle_sensor import RotaryAngleSensor
-from zorg_gpio.touch_sensor import TouchSensor
 from .mock_device import MockAdaptor
 from unittest import TestCase
 
@@ -120,16 +119,3 @@ class TestTemperatureSensor(TestCase):
 
     def test_read_kelvin(self):
         self.assertEqual(self.sensor.read_kelvin(), 298.15)
-
-
-class TestTouchSensor(TestCase):
-
-    def setUp(self):
-        self.sensor = TouchSensor({}, MockAdaptor())
-
-    def test_pressed(self):
-        self.assertTrue(self.sensor.is_pressed())
-
-    def test_not_pressed(self):
-        self.sensor.connection.digital_read.return_value = 0.0
-        self.assertFalse(self.sensor.is_pressed())

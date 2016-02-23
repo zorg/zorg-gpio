@@ -9,7 +9,6 @@ from .relay import Relay
 from .rotary_angle_sensor import RotaryAngleSensor
 from .servo import Servo
 from .temperature_sensor import TemperatureSensor
-from .touch_sensor import TouchSensor
 
 
 __all__ = [
@@ -24,7 +23,6 @@ __all__ = [
     'RotaryAngleSensor',
     'Servo',
     'TemperatureSensor',
-    'TouchSensor',
 ]
 
 __version__ = '0.0.1'

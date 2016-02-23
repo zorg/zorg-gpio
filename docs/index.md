@@ -23,7 +23,6 @@ pip install zorg-gpio
 * [Rotary Angle Sensor](rotary_angle_sensor.md)
 * [Servo](servo.md)
 * [Temperature sensor](temperature_sensor.md)
-* [Touch sensor](touch_sensor.md)
 
 ## Connections
 
