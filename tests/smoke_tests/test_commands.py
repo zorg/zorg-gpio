@@ -5,11 +5,7 @@ from zorg_gpio import Buzzer
 from zorg_gpio import DigitalSensor
 from zorg_gpio import Led
 from zorg_gpio import LightSensor
-from zorg_gpio import Microphone
 from zorg_gpio import Relay
-from zorg_gpio import RotaryAngleSensor
-from zorg_gpio import Servo
-from zorg_gpio import TemperatureSensor
 
 
 class SmokeTestCase(TestCase):
@@ -77,15 +73,6 @@ class LightSensorTests(SmokeTestCase):
             self.assertIn(command, dir(sensor))
 
 
-class MicrophoneTests(SmokeTestCase):
-
-    def test_command_method_exists(self):
-        mic = Microphone(self.options, self.connection)
-
-        for command in mic.commands:
-            self.assertIn(command, dir(mic))
-
-
 class RelaySmokeTests(SmokeTestCase):
 
     def test_command_method_exists(self):
@@ -93,30 +80,3 @@ class RelaySmokeTests(SmokeTestCase):
 
         for command in relay.commands:
             self.assertIn(command, dir(relay))
-
-
-class RotaryAngleSensorSmokeTests(SmokeTestCase):
-
-    def test_command_method_exists(self):
-        sensor = RotaryAngleSensor(self.options, self.connection)
-
-        for command in sensor.commands:
-            self.assertIn(command, dir(sensor))
-
-
-class ServoSmokeTests(SmokeTestCase):
-
-    def test_command_method_exists(self):
-        servo = Servo(self.options, self.connection)
-
-        for command in servo.commands:
-            self.assertIn(command, dir(servo))
-
-
-class TemperatureSmokeTests(SmokeTestCase):
-
-    def test_command_method_exists(self):
-        sensor = TemperatureSensor(self.options, self.connection)
-
-        for command in sensor.commands:
-            self.assertIn(command, dir(sensor))

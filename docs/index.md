@@ -18,11 +18,7 @@ pip install zorg-gpio
 * [Digital sensor](digital_sensor.md)
 * [LED](led.md)
 * [Light sensor](light_sensor.md)
-* [Microphone](microphone.md)
 * [Relay](relay.md)
-* [Rotary Angle Sensor](rotary_angle_sensor.md)
-* [Servo](servo.md)
-* [Temperature sensor](temperature_sensor.md)
 
 ## Connections
 

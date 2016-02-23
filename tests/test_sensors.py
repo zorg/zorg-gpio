@@ -1,10 +1,7 @@
-from zorg_gpio.temperature_sensor import TemperatureSensor
 from zorg_gpio.analog_sensor import AnalogSensor
 from zorg_gpio.button import Button
 from zorg_gpio.digital_sensor import DigitalSensor
 from zorg_gpio.light_sensor import LightSensor
-from zorg_gpio.microphone import Microphone
-from zorg_gpio.rotary_angle_sensor import RotaryAngleSensor
 from .mock_device import MockAdaptor
 from unittest import TestCase
 
@@ -53,28 +50,6 @@ class TestLightSensor(TestCase):
         self.assertTrue(self.sensor.has_changed())
 
 
-class TestMicrophone(TestCase):
-
-    def setUp(self):
-        self.mic = Microphone({}, MockAdaptor())
-
-    def test_read_decibels(self):
-        reading = self.mic.read_decibels()
-        self.assertTrue(reading < -13)
-        self.assertTrue(reading > -15)
-
-
-class TestRotaryAngleSensor(TestCase):
-
-    def setUp(self):
-        self.sensor = RotaryAngleSensor({}, MockAdaptor())
-
-    def test_read_angle(self):
-        # Test reading should approximate to 146.627565982404
-        angle = self.sensor.read_angle()
-        self.assertTrue(angle > 145)
-        self.assertTrue(angle < 147)
-
 class TestButton(TestCase):
 
     def setUp(self):
@@ -104,18 +79,3 @@ class TestButton(TestCase):
         self.button.previous_state = 0.0
         self.button.connection.digital_read.return_value = 0.0
         self.assertFalse(self.button.is_bumped())
-
-
-class TestTemperatureSensor(TestCase):
-
-    def setUp(self):
-        self.sensor = TemperatureSensor({}, MockAdaptor())
-
-    def test_read_celsius(self):
-        self.assertEqual(self.sensor.read_celsius(), 25)
-
-    def test_read_fahrenheit(self):
-        self.assertEqual(self.sensor.read_fahrenheit(), 77)
-
-    def test_read_kelvin(self):
-        self.assertEqual(self.sensor.read_kelvin(), 298.15)
