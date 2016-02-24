@@ -10,7 +10,7 @@ class LightSensor(AnalogSensor):
 
         self.previous_value = -1.0
 
-        self.commands += ["read"]
+        self.commands += ["read", "has_changed"]
 
     def has_changed(self):
         """

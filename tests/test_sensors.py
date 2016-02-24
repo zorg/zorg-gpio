@@ -1,8 +1,7 @@
-from zorg_gpio.temperature_sensor import TemperatureSensor
 from zorg_gpio.analog_sensor import AnalogSensor
+from zorg_gpio.button import Button
 from zorg_gpio.digital_sensor import DigitalSensor
 from zorg_gpio.light_sensor import LightSensor
-from zorg_gpio.button import Button
 from .mock_device import MockAdaptor
 from unittest import TestCase
 
@@ -80,19 +79,3 @@ class TestButton(TestCase):
         self.button.previous_state = 0.0
         self.button.connection.digital_read.return_value = 0.0
         self.assertFalse(self.button.is_bumped())
-
-
-class TestTemperatureSensor(TestCase):
-
-    def setUp(self):
-        self.sensor = TemperatureSensor({}, MockAdaptor())
-
-    def test_read_celsius(self):
-        self.assertEqual(self.sensor.read_celsius(), 25)
-
-    def test_read_fahrenheit(self):
-        self.assertEqual(self.sensor.read_fahrenheit(), 77)
-
-    def test_read_kelvin(self):
-        self.assertEqual(self.sensor.read_kelvin(), 298.15)
-

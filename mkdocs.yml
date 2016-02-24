@@ -4,11 +4,10 @@ pages:
 - Home: index.md
 - Drivers:
   - LED: led.md
-  - Servo: servo.md
   - Relay: relay.md
   - Button: button.md
+  - Buzzer: buzzer.md
   - Analog sensor: analog_sensor.md
   - Digital sensor: digital_sensor.md
   - Light sensor: light_sensor.md
-  - Temperature sensor: temperature_sensor.md
 theme: readthedocs
