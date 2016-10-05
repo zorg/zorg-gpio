@@ -2,42 +2,15 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
-from setuptools.command.install import install
-from distutils.core import Command
 import os
 
+with open('requirements.txt') as req:
+    REQUIREMENTS = req.readlines()
 
-class MakeReadme(Command):
-    description = 'Generates a README.rst version of README.md'
-    user_options = []
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
-        try:
-            from pypandoc import convert
-            rst = convert('README.md', 'rst')
-            readme = open('README.rst', 'w+')
-            readme.write(rst)
-            readme.close()
-        except ImportError:
-            raise ImportWarning('Module pypandoc not found, could not convert Markdown to RST')
-
-
-req = open('requirements.txt')
-REQUIREMENTS = req.readlines()
-req.close()
-
+README = ['GPIO Drivers']
 if os.path.isfile('README.rst') :
-    rm = open('README.rst')
-    README = rm.readlines()
-    rm.close()
-else:
-    README = ''
+    with open('README.rst') as rm:
+        README = rm.readlines()
 
 # Dynamically retrieve the version from the module
 version_string = __import__('zorg_gpio').__version__
@@ -72,8 +45,5 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     test_suite='tests',
-    tests_require=['mock'],
-    cmdclass={
-        'make_readme': MakeReadme,
-    }
+    tests_require=['mock']
 )
