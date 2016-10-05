@@ -4,13 +4,15 @@
 from setuptools import setup, find_packages
 import os
 
+
+def read(fname):
+    open_file = open(os.path.join(os.path.dirname(__file__), fname))
+    file_content = open_file.read()
+    open_file.close()
+    return file_content
+
 with open('requirements.txt') as req:
     REQUIREMENTS = req.readlines()
-
-README = ['GPIO Drivers']
-if os.path.isfile('README.rst') :
-    with open('README.rst') as rm:
-        README = rm.readlines()
 
 # Dynamically retrieve the version from the module
 version_string = __import__('zorg_gpio').__version__
@@ -20,7 +22,7 @@ setup(
     version=version_string,
     url='https://github.com/zorg/zorg-gpio',
     description='GPIO drivers for Zorg robots.',
-    long_description=README,
+    long_description=read('README.rst'),
     maintainer='Zorg Group',
     maintainer_email='gunthercx@gmail.com',
     packages=find_packages(),
