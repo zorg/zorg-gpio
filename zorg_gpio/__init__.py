@@ -21,4 +21,4 @@ __all__ = [
     'Relay',
 ]
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
